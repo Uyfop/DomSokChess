@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Figures">
+      <UniqueIdentifier>{da274a11-5886-48db-af5d-f99f241348c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Figures">
+      <UniqueIdentifier>{d9dcf52c-d021-45e8-9691-8aed37e7d5c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Players">
+      <UniqueIdentifier>{7e1181c5-ec48-48d8-82ed-21043acbc7d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Players">
+      <UniqueIdentifier>{105b547f-0f72-4787-bd56-e8fd848a6de6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DomsokChess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Board.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Bishop.cpp">
+      <Filter>Source Files\Figures</Filter>
+    </ClCompile>
+    <ClCompile Include="Figure.cpp">
+      <Filter>Source Files\Figures</Filter>
+    </ClCompile>
+    <ClCompile Include="King.cpp">
+      <Filter>Source Files\Figures</Filter>
+    </ClCompile>
+    <ClCompile Include="Knight.cpp">
+      <Filter>Source Files\Figures</Filter>
+    </ClCompile>
+    <ClCompile Include="Pawn.cpp">
+      <Filter>Source Files\Figures</Filter>
+    </ClCompile>
+    <ClCompile Include="Queen.cpp">
+      <Filter>Source Files\Figures</Filter>
+    </ClCompile>
+    <ClCompile Include="Rook.cpp">
+      <Filter>Source Files\Figures</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files\Players</Filter>
+    </ClCompile>
+    <ClCompile Include="Human.cpp">
+      <Filter>Source Files\Players</Filter>
+    </ClCompile>
+    <ClCompile Include="Bot.cpp">
+      <Filter>Source Files\Players</Filter>
+    </ClCompile>
+    <ClCompile Include="UTBoard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Figure.h">
+      <Filter>Header Files\Figures</Filter>
+    </ClInclude>
+    <ClInclude Include="King.h">
+      <Filter>Header Files\Figures</Filter>
+    </ClInclude>
+    <ClInclude Include="Pawn.h">
+      <Filter>Header Files\Figures</Filter>
+    </ClInclude>
+    <ClInclude Include="Knight.h">
+      <Filter>Header Files\Figures</Filter>
+    </ClInclude>
+    <ClInclude Include="Queen.h">
+      <Filter>Header Files\Figures</Filter>
+    </ClInclude>
+    <ClInclude Include="Rook.h">
+      <Filter>Header Files\Figures</Filter>
+    </ClInclude>
+    <ClInclude Include="Bishop.h">
+      <Filter>Header Files\Figures</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Header Files\Players</Filter>
+    </ClInclude>
+    <ClInclude Include="Bot.h">
+      <Filter>Header Files\Players</Filter>
+    </ClInclude>
+    <ClInclude Include="Human.h">
+      <Filter>Header Files\Players</Filter>
+    </ClInclude>
+    <ClInclude Include="enum_list.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Board.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UTBoard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
