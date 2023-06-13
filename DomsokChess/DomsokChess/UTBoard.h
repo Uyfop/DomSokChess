@@ -7,5 +7,5 @@ public:
 	bool TestMate1();
 	bool TestMate2();
 	bool TestPate1();
-
+	bool TestMate3();
 };

@@ -36,3 +36,17 @@ bool UTBoard::TestPate1()
 
 	return is_pate(Piece_color::white);
 }
+
+bool UTBoard::TestMate3()
+{
+	m_figures.clear();
+	memset(pole, 0, sizeof(pole));
+
+	place_figure(63, new Rook(Piece_color::white));
+	place_figure(0, new King(Piece_color::white));
+	place_figure(59, new King(Piece_color::black));
+	for (int i = 48; i < 55; ++i)
+		place_figure(i, new Pawn(Piece_color::black));
+
+	return is_mate(Piece_color::black);
+}

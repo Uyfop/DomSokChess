@@ -94,7 +94,7 @@ void Board::start_board()
 {
 	m_figures.clear();
 	memset(pole, 0, sizeof(pole));
-	/*place_figure(0, new Rook(Piece_color::white));
+	place_figure(0, new Rook(Piece_color::white));
 	place_figure(1, new Knight(Piece_color::white));
 	place_figure(2, new Bishop(Piece_color::white));
 	place_figure(3, new King(Piece_color::white));
@@ -119,13 +119,8 @@ void Board::start_board()
 	place_figure(59, new King(Piece_color::black));
 	place_figure(7, new Rook(Piece_color::white));
 	place_figure(56, new Rook(Piece_color::black));
-	place_figure(63, new Rook(Piece_color::black));*/
-	place_figure(55, new Rook(Piece_color::white));
-	place_figure(0, new King(Piece_color::white));
-	place_figure(59, new King(Piece_color::black));
-	for (int i = 48; i < 55; ++i)
-		place_figure(i, new Pawn(Piece_color::black));
-
+	place_figure(63, new Rook(Piece_color::black));
+	
 }
 
 void Board::print_board(Piece_color k)
@@ -241,6 +236,10 @@ bool Board::is_mate(Piece_color c_active_color)
 
 		for (int j = 0; j < all_current_available.size(); ++j)
 		{
+			if (get_field(all_current_available[j]) != nullptr && get_field(all_current_available[j])->get_type() == Piece_types::King)
+				continue;
+			if (!pFigure->check_move(IndexToFieldDescriptor(i), all_current_available[j], this, c_active_color) || !pFigure->check_attack(this, IndexToFieldDescriptor(i), all_current_available[j], c_active_color))
+				continue;
 			std::swap(pole[i], pole[FieldDescriptorToIndex(all_current_available[j])]);
 			pole[i] = nullptr;
 			bool king_still_checked = king_is_checked(c_active_color);
@@ -287,7 +286,7 @@ void Board::pawns_check(Piece_color c_active_player)
 	std::regex right_answer("[Q,S,B,R,K]");
 	if (c_active_player == Piece_color::white)
 	{
-		for (int i = 56; i < 64; ++i)
+		for (int i = 56; i < 63; ++i)
 		{
 			Figure* pFigure = get_field(IndexToFieldDescriptor(i));
 			if (!pFigure)
@@ -305,7 +304,7 @@ void Board::pawns_check(Piece_color c_active_player)
 	}
 	else
 	{
-		for (int i = 0; i < 9; ++i)
+		for (int i = 0; i < 8; ++i)
 		{
 			Figure* pFigure = get_field(IndexToFieldDescriptor(i));
 			if (!pFigure)

@@ -85,6 +85,12 @@ bool unittests_passed()
 		return false;
 	}
 
+	if (!board.TestMate3())
+	{
+		std::cout << "TestMate3 failure!\n";
+		return false;
+	}
+
 	return true;
 }
 
